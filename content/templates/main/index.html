@@ -1,0 +1,26 @@
+{% extends 'layouts/default/page.html' %}
+{% load static %}
+
+{% load i18n %}
+
+{% block content %}
+
+    {% if request.user.is_authenticated %}
+
+<!--        {% trans 'Your username is' %} <b>{% trans  request.user.username %}</b>.-->
+
+<br>
+<a href="/accounts/portfolio">Stock view</a>
+<br><br>
+<a href="/accounts/estimation">Estimation</a>
+
+
+    {% else %}
+
+        {% trans 'You are a guest.' %}
+
+    {% endif %}
+
+{% endblock %}
+
+
